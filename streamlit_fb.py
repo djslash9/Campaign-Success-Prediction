@@ -7,6 +7,16 @@ import base64
 import matplotlib.pyplot as plt
 
 # Page configuration
+# Hide the footer and fork button
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            .stDeployButton {display:none;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 st.set_page_config(page_title="Campaign Success Predictor", layout="wide")
 st.title("🎯 Campaign Success Prediction")
 
